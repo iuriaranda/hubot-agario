@@ -7,7 +7,7 @@
 
 
 module.exports = function(robot) {
-  robot.respond(/create agario party/, function(msg) {
+  robot.respond(/create agario party/i, function(msg) {
     robot.http('http://m.agar.io/findServer')
     .post('EU-London:party\n154669603')(function(err, res, body) {
       if (err) {
